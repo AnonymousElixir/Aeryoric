@@ -1,7 +1,221 @@
-body {
-  background-color: #3f1b66;
-  font-family: sans-serif;
-  margin: auto;
-  max-width: 70ch;
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  background: #3f1b66;
   color: #f29333;
+  font-family: 'Merriweather', serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 100vw;
+  padding: 2rem 3rem;
+}
+
+nav {
+  background-color: #4b2576;
+  border-radius: 0.75rem;
+  padding: 1rem 2rem;
+  display: flex;
+  gap: 2rem;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 3rem;
+  user-select: none;
+}
+
+nav a {
+  color: #f29333;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.2s ease;
+  position: relative;
+}
+nav a:hover, nav a:focus {
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+main {
+  flex-grow: 1;
+  max-width: 75ch;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+h1, h2, h3, h4 {
+  color: #ffa64d;
+  font-weight: 800;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.35rem;
+  user-select: text;
+  text-shadow:
+    0 0 6px rgba(242, 147, 51, 0.7),
+    0 0 12px rgba(242, 147, 51, 0.4);
+}
+
+h1::after, h2::after, h3::after, h4::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: calc(100% + 1.2em); /* extend a bit past the text */
+  height: 3px;
+  background-color: #f29333;
+  border-radius: 2px;
+  filter: drop-shadow(0 0 4px #f29333);
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+
+p {
+  color: #f9a443;
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.02em;
+  text-shadow: 0 0 4px rgba(242, 147, 51, 0.2);
+}
+
+a {
+  color: #ffb066;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+a:hover, a:focus {
+  color: #ffffff;
+}
+
+button {
+  background-color: #f29333;
+  color: #3f1b66;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.6rem;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow:
+    0 0 6px #f29333aa,
+    inset 0 -3px 0 #c3751a;
+  transition: background-color 0.25s ease, box-shadow 0.3s ease;
+  user-select: none;
+}
+button:hover, button:focus {
+  background-color: #ffa94d;
+  box-shadow:
+    0 0 12px #ffa94daa,
+    inset 0 -3px 0 #d78a2b;
+}
+
+input, textarea {
+  background-color: #4b2576;
+  color: #f29333;
+  border: 1.5px solid #f29333;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.25rem;
+  font-size: 1rem;
+  width: 100%;
+  transition: border-color 0.3s ease;
+  font-family: inherit;
+  user-select: text;
+}
+input::placeholder,
+textarea::placeholder {
+  color: #d67b2d;
+}
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #ffa94d;
+  box-shadow: 0 0 8px #ffa94d99;
+}
+
+::selection {
+  background: #f29333;
+  color: #3f1b66;
+}
+
+.site-footer {
+  background-color: #2b1043;
+  color: #f29333;
+  padding: 2rem 1rem;
+  text-align: center;
+  font-size: 0.95rem;
+  margin-top: 4rem;
+  box-shadow: 0 -4px 12px rgba(0,0,0,0.2);
+  border-top: 2px solid #f29333;
+}
+
+.site-footer p {
+  margin: 0;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 5px rgba(242, 147, 51, 0.5);
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.footer-nav a {
+  color: #f29333;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.footer-nav a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -3px;
+  transform: translateX(-50%);
+  width: 0%;
+  height: 2px;
+  background-color: #f29333;
+  transition: width 0.3s;
+}
+
+.footer-nav a:hover::after {
+  width: 100%;
+}
+
+
+@media (max-width: 600px) {
+  body {
+    padding: 1rem 1.5rem;
+  }
+  nav {
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  nav a {
+    font-size: 1rem;
+  }
+  main {
+    max-width: 100%;
+  }
 }

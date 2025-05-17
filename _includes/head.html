@@ -1,6 +1,20 @@
 <head>
+  <!-- base stuff from tonic steps -->
   <title>{{ page.title }} | {{ site.title }}</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="{{ '/assets/Aeryoric.css' | relative_url }}">
+
+  <!-- Discord Opengraph Metadata -->
+  <meta property="og:title" content="{{ page.title }} | {{ site.title }}">
+  <meta property="og:description" content="A Jekyll Theme that is purple and orange.">
+  <meta property="og:image" content="{{ site.url }}/assets/og-preview.png">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:type" content="website">
+
+  <!-- Pretty twitter/x displaying -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page.title }} | {{ site.title }}">
+  <meta name="twitter:description" content="A Jekyll Theme that is purple and orange.">
+  <meta name="twitter:image" content="{{ site.url }}/assets/og-preview.png">
 </head>
