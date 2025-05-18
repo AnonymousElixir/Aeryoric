@@ -1,5 +1,5 @@
 title: Aeryoric
 description: "A Jekyll Theme Based Mostly On The Color Purple with a bit of orange."
 encoding: utf-8
-
+url: "https://cassidycamp.work/Aeryoric"
 exclude: ["README.md", "LICENSE", "*.gem", "*.gemspec", "Gemfile.lock"]
