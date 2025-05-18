@@ -1,5 +1,30 @@
 /* This file is where all special things that aren't in html by default will be located */
 .highlighted {
-  background: #f29333;
+  background-color: #f29333;
   color: #3f1b66 !important;
+  font-weight: 500;
+  text-decoration: underline;
+  padding: 0.1em 0.3em;
+  border-radius: 2px;
+}
+
+.underlined {
+  position: relative;
+  display: inline-block;
+  color: #f29333;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.underlined::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 8px;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 4 Q10 8 20 4 T40 4 T60 4 T80 4 T100 4' stroke='%23f29333' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  pointer-events: none;
 }

@@ -38,4 +38,4 @@ This is what the nav bar looks like
 even inputs and textareas are styled to match the theme :D
 
 ## Typography Example
-<a href="https://example.com/linkcusyes">this is a link</a> and here’s some regular text.
+<a href="https://example.com/linkcusyes">this is a link</a>, Heres a <span class=highlighted>highlight</span>, Text can be <span class=underlined>Underlined</span>, and here’s some regular text.
