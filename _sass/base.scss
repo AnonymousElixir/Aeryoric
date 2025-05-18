@@ -14,8 +14,6 @@ html, body {
   color: #f29333;
   font-family: 'Merriweather', serif;
   line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -90,14 +88,23 @@ button {
   box-shadow:
     0 0 6px #f29333aa,
     inset 0 -3px 0 #c3751a;
-  transition: background-color 0.25s ease, box-shadow 0.3s ease;
+  transition: all 0.25s ease;
   user-select: none;
 }
-button:hover, button:focus {
+
+button:hover {
   background-color: #ffa94d;
   box-shadow:
     0 0 12px #ffa94daa,
     inset 0 -3px 0 #d78a2b;
+}
+
+button:active {
+  transform: scale(0.95) translateY(2px);
+  background-color: #f29333;
+  box-shadow: 
+    0 0 4px #f29333aa,
+    inset 0 -1px 0 #c3751a;
 }
 
 input, textarea {
