@@ -3,6 +3,7 @@
 A jekyll theme made by me for <a href="https://tonic.hackclub.com/">Tonic</a> that is purple with a nice orange accent color.
 
 ## Technologies used
-![image](https://github.com/user-attachments/assets/f152cf15-b170-4af0-a583-ffa8ff8d07f4)
-![image](https://github.com/user-attachments/assets/966976f5-e945-4389-8174-e3d7350aec96)
-![image](https://github.com/user-attachments/assets/99d0d1c8-152e-4af3-ad1f-b8c334f9ff3f)
+
+![image](https://github.com/user-attachments/assets/74f0410c-fd92-4be3-bae1-8b457b5a8e8d)
+![image](https://github.com/user-attachments/assets/e268ab4f-24c5-47d1-9fdd-6a6d88174c00)
+![image](https://github.com/user-attachments/assets/b07a7eba-c60f-4358-8220-1a34af9447c0)
