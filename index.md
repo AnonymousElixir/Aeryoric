@@ -4,7 +4,7 @@ layout: default
 ---
 
 # Aeryoric
-Aeryoric (AIR-ee-OR-ik) is an opensource jekyll theme that is mostly purple with some orange highlights.
+Aeryoric (AIR-ee-OR-ik) is an <a href="https://github.com/AnonymousElixir/Aeryoric">opensource</a> jekyll theme that is mostly purple with some orange highlights.
 
 ## subheading example
 
@@ -19,7 +19,7 @@ This is a button ^^
 ## Navigation example
 
 <nav>
-  <a href="/">Home</a>
+  <a href="/#home">Home</a>
   <a href="/#about">About</a>
   <a href="/#docs">Docs</a>
 </nav>
