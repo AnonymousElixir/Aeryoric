@@ -3,19 +3,21 @@ nav {
   background-image: linear-gradient(135deg, #4b2576, #5d2e94);
   border-radius: 0.75rem;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15), 0 1px 3px rgba(0, 0, 0, 0.2);
-  padding: 1.25rem 2.5rem;
+  padding: 1rem 2rem;
   display: flex;
-  gap: 2.5rem;
+  gap: 2rem;
   justify-content: flex-start;
   align-items: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
+  position: sticky;
   top: 1rem;
-  z-index: 100;
+  z-index: 9999;
   max-width: 95%;
   margin-left: auto;
   margin-right: auto;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
   user-select: none;
+  flex-wrap: wrap;
 }
 
 nav:hover {
@@ -26,15 +28,17 @@ nav:hover {
 nav a {
   color: #f29333;
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   text-decoration: none;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   position: relative;
-  padding: 0.5rem 0.75rem;
+  padding: 0.6rem 1rem;
   border-radius: 0.5rem;
+  white-space: nowrap;
 }
 
-nav a:hover, nav a:focus {
+nav a:hover,
+nav a:focus {
   transform: translateY(-3px);
   background-color: rgba(255, 255, 255, 0.1);
   outline: none;
@@ -42,6 +46,7 @@ nav a:hover, nav a:focus {
 
 nav a:focus-visible {
   outline-offset: 3px;
+  outline: 2px solid #f29333;
 }
 
 nav a::after {
@@ -53,9 +58,11 @@ nav a::after {
   height: 2px;
   transition: width 0.3s ease;
   border-radius: 1px;
+  background-color: #f29333;
 }
 
-nav a:hover::after, nav a:focus::after {
+nav a:hover::after,
+nav a:focus::after {
   width: 100%;
 }
 
@@ -64,9 +71,19 @@ nav a:active {
 }
 
 @keyframes navItemAppear {
-  0% { opacity: 0; transform: translateY(-10px); }
-  50% { transform: translateY(5px); }
-  100% { opacity: 1; transform: translateY(0); }
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  50% {
+    transform: translateY(5px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 nav a {
@@ -86,45 +103,18 @@ nav a.active::before {
   width: 50%;
   height: 3px;
   border-radius: 3px;
+  background-color: #f29333;
 }
-
-@media (max-width: 768px) {
+@media (min-width: 421px) and (max-width: 768px) {
   nav {
+    flex-wrap: nowrap;
+    gap: 1rem;
     padding: 1rem 1.5rem;
-    gap: 1.5rem;
     border-radius: 0.5rem;
   }
-}
 
-@media (max-width: 600px) {
-  nav {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0.75rem;
-    padding: 1rem;
-  }
-  
   nav a {
-    font-size: 1rem;
-    text-align: center;
-    padding: 0.75rem;
-    border-radius: 0.25rem;
-  }
-  
-  nav a:hover, nav a:focus {
-    transform: scale(1.03);
-    background-color: rgba(255, 255, 255, 0.15);
-  }
-  
-  nav a::after {
-    display: none;
-  }
-  
-  nav a.active::before {
-    bottom: auto;
-    left: 0;
-    top: 0;
-    width: 4px;
-    height: 100%;
+    font-size: 1.1rem;
+    padding: 0.5rem 0.75rem;
   }
 }
