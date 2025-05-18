@@ -1,0 +1,35 @@
+nav {
+  background-color: #4b2576;
+  border-radius: 0.75rem;
+  padding: 1rem 2rem;
+  display: flex;
+  gap: 2rem;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 3rem;
+  user-select: none;
+}
+
+nav a {
+  color: #f29333;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.2s ease;
+  position: relative;
+}
+nav a:hover, nav a:focus {
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+  nav {
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  nav a {
+    font-size: 1rem;
+  }
+}
