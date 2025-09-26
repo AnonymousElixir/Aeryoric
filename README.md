@@ -1,3 +1,7 @@
+> This project is archived as the Tonic event will be shut down unfulfilled
+> as Lux has exited her role at Hackclub HQ as a full-time staff member to search for her next adventure
+> this is not the way she would've ever wanted Tonic to end, and for that, she apologizes profusely.
+> She says she wants to revisit the Tonic site at some point, disconnecting it from Slack sign-in and preserving it as a source of knowledge, but if she does, it will be well after shes left.
 # Aeryoric
 
 A jekyll theme made by me for <a href="https://tonic.hackclub.com/">Tonic</a> that is purple with a nice orange accent color.
